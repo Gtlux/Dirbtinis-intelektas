@@ -1,0 +1,546 @@
+{
+  "nodes": [
+    {
+      "id": 11,
+      "title": "Motyvacija",
+      "x": 490,
+      "y": 343.1499938964844,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "11taip": 0.6,
+        "11ne": 0.4
+      },
+      "sampled": false
+    },
+    {
+      "id": 12,
+      "title": "Geri Dėstytojai",
+      "x": 497,
+      "y": 231.14999389648438,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "12taip": 0.5,
+        "12ne": 0.5
+      },
+      "sampled": false
+    },
+    {
+      "id": 13,
+      "title": "Mokymasis",
+      "x": 772,
+      "y": 294.2937927246094,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "11taip": {
+          "13taip": 0.85,
+          "13ne": 0.15
+        },
+        "11ne": {
+          "13taip": 0.2,
+          "13ne": 0.8
+        }
+      },
+      "sampled": false
+    },
+    {
+      "id": 14,
+      "title": "Geraz Egzaminas",
+      "x": 970,
+      "y": 293.2938232421875,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "12taip": {
+          "13taip": {
+            "15taip": {
+              "14taip": 0.95,
+              "14ne": 0.05
+            },
+            "15ne": {
+              "14taip": 0.8,
+              "14ne": 0.2
+            }
+          },
+          "13ne": {
+            "15taip": {
+              "14taip": 0.7,
+              "14ne": 0.3
+            },
+            "15ne": {
+              "14taip": 0.55,
+              "14ne": 0.45
+            }
+          }
+        },
+        "12ne": {
+          "13taip": {
+            "15taip": {
+              "14taip": 0.4,
+              "14ne": 0.6
+            },
+            "15ne": {
+              "14taip": 0.25,
+              "14ne": 0.75
+            }
+          },
+          "13ne": {
+            "15taip": {
+              "14taip": 0.1,
+              "14ne": 0.9
+            },
+            "15ne": {
+              "14taip": 0.05,
+              "14ne": 0.95
+            }
+          }
+        }
+      },
+      "sampled": false
+    },
+    {
+      "id": 15,
+      "title": "Dalyvavimas Paskaitoje",
+      "x": 770,
+      "y": 410.2938232421875,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "11taip": {
+          "15taip": 0.9,
+          "15ne": 0.1
+        },
+        "11ne": {
+          "15taip": 0.3,
+          "15ne": 0.7
+        }
+      },
+      "sampled": false
+    },
+    {
+      "id": 16,
+      "title": "Diplomas",
+      "x": 1118.9862060546875,
+      "y": 307.1499938964844,
+      "values": [
+        "taip",
+        "ne"
+      ],
+      "tbl": {
+        "14taip": {
+          "16taip": 0.95,
+          "16ne": 0.05
+        },
+        "14ne": {
+          "16taip": 0.1,
+          "16ne": 0.9
+        }
+      },
+      "sampled": false
+    }
+  ],
+  "edges": [
+    {
+      "source": {
+        "id": 11,
+        "title": "Motyvacija",
+        "x": 490,
+        "y": 343.1499938964844,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": 0.6,
+          "11ne": 0.4
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 13,
+        "title": "Mokymasis",
+        "x": 772,
+        "y": 294.2937927246094,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": {
+            "13taip": 0.85,
+            "13ne": 0.15
+          },
+          "11ne": {
+            "13taip": 0.2,
+            "13ne": 0.8
+          }
+        },
+        "sampled": false
+      }
+    },
+    {
+      "source": {
+        "id": 11,
+        "title": "Motyvacija",
+        "x": 490,
+        "y": 343.1499938964844,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": 0.6,
+          "11ne": 0.4
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 15,
+        "title": "Dalyvavimas Paskaitoje",
+        "x": 770,
+        "y": 410.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": {
+            "15taip": 0.9,
+            "15ne": 0.1
+          },
+          "11ne": {
+            "15taip": 0.3,
+            "15ne": 0.7
+          }
+        },
+        "sampled": false
+      }
+    },
+    {
+      "source": {
+        "id": 13,
+        "title": "Mokymasis",
+        "x": 772,
+        "y": 294.2937927246094,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": {
+            "13taip": 0.85,
+            "13ne": 0.15
+          },
+          "11ne": {
+            "13taip": 0.2,
+            "13ne": 0.8
+          }
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 14,
+        "title": "Geraz Egzaminas",
+        "x": 970,
+        "y": 293.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "12taip": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.95,
+                "14ne": 0.05
+              },
+              "15ne": {
+                "14taip": 0.8,
+                "14ne": 0.2
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.7,
+                "14ne": 0.3
+              },
+              "15ne": {
+                "14taip": 0.55,
+                "14ne": 0.45
+              }
+            }
+          },
+          "12ne": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.4,
+                "14ne": 0.6
+              },
+              "15ne": {
+                "14taip": 0.25,
+                "14ne": 0.75
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.1,
+                "14ne": 0.9
+              },
+              "15ne": {
+                "14taip": 0.05,
+                "14ne": 0.95
+              }
+            }
+          }
+        },
+        "sampled": false
+      }
+    },
+    {
+      "source": {
+        "id": 15,
+        "title": "Dalyvavimas Paskaitoje",
+        "x": 770,
+        "y": 410.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "11taip": {
+            "15taip": 0.9,
+            "15ne": 0.1
+          },
+          "11ne": {
+            "15taip": 0.3,
+            "15ne": 0.7
+          }
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 14,
+        "title": "Geraz Egzaminas",
+        "x": 970,
+        "y": 293.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "12taip": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.95,
+                "14ne": 0.05
+              },
+              "15ne": {
+                "14taip": 0.8,
+                "14ne": 0.2
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.7,
+                "14ne": 0.3
+              },
+              "15ne": {
+                "14taip": 0.55,
+                "14ne": 0.45
+              }
+            }
+          },
+          "12ne": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.4,
+                "14ne": 0.6
+              },
+              "15ne": {
+                "14taip": 0.25,
+                "14ne": 0.75
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.1,
+                "14ne": 0.9
+              },
+              "15ne": {
+                "14taip": 0.05,
+                "14ne": 0.95
+              }
+            }
+          }
+        },
+        "sampled": false
+      }
+    },
+    {
+      "source": {
+        "id": 12,
+        "title": "Geri Dėstytojai",
+        "x": 497,
+        "y": 231.14999389648438,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "12taip": 0.5,
+          "12ne": 0.5
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 14,
+        "title": "Geraz Egzaminas",
+        "x": 970,
+        "y": 293.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "12taip": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.95,
+                "14ne": 0.05
+              },
+              "15ne": {
+                "14taip": 0.8,
+                "14ne": 0.2
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.7,
+                "14ne": 0.3
+              },
+              "15ne": {
+                "14taip": 0.55,
+                "14ne": 0.45
+              }
+            }
+          },
+          "12ne": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.4,
+                "14ne": 0.6
+              },
+              "15ne": {
+                "14taip": 0.25,
+                "14ne": 0.75
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.1,
+                "14ne": 0.9
+              },
+              "15ne": {
+                "14taip": 0.05,
+                "14ne": 0.95
+              }
+            }
+          }
+        },
+        "sampled": false
+      }
+    },
+    {
+      "source": {
+        "id": 14,
+        "title": "Geraz Egzaminas",
+        "x": 970,
+        "y": 293.2938232421875,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "12taip": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.95,
+                "14ne": 0.05
+              },
+              "15ne": {
+                "14taip": 0.8,
+                "14ne": 0.2
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.7,
+                "14ne": 0.3
+              },
+              "15ne": {
+                "14taip": 0.55,
+                "14ne": 0.45
+              }
+            }
+          },
+          "12ne": {
+            "13taip": {
+              "15taip": {
+                "14taip": 0.4,
+                "14ne": 0.6
+              },
+              "15ne": {
+                "14taip": 0.25,
+                "14ne": 0.75
+              }
+            },
+            "13ne": {
+              "15taip": {
+                "14taip": 0.1,
+                "14ne": 0.9
+              },
+              "15ne": {
+                "14taip": 0.05,
+                "14ne": 0.95
+              }
+            }
+          }
+        },
+        "sampled": false
+      },
+      "target": {
+        "id": 16,
+        "title": "Diplomas",
+        "x": 1118.9862060546875,
+        "y": 307.1499938964844,
+        "values": [
+          "taip",
+          "ne"
+        ],
+        "tbl": {
+          "14taip": {
+            "16taip": 0.95,
+            "16ne": 0.05
+          },
+          "14ne": {
+            "16taip": 0.1,
+            "16ne": 0.9
+          }
+        },
+        "sampled": false
+      }
+    }
+  ]
+}

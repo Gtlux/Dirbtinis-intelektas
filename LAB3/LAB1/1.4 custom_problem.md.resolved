@@ -1,0 +1,90 @@
+# Uzduotis 1.4 – Savo paieskos uzdavinys (Farmer Problem)
+
+## Naudoti Prompt'ai (Google Antigravity)
+
+### Prompt 1:
+> gerai, padaryk dabar sita dali
+> 1.4 Sukurti savo paieškos uždavinio sistemą naudojant aima architektūrą bei VC Copilot AI arba Google Antigravity (neredaguoti koda , parodyti atsiskaitymo metu tik Prompt'us). Atsiskaitymo metu kiekvienas turi sugebėti paaiškinti ką daro kodas.
+
+### Prompt 2:
+> gal padaryk geriau kita, kokia fermerio lapes vistos ir grudu per upe uzdaviny. Tik koda kiekviena eilute aprasyk ka daro, ir geriau kad koda galima butu pasileist
+
+**Rezultatas**: Antigravity sukūrė [WaterJugProblem.py](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/WaterJugProblem.py) – fermerio, lapės, vištos ir grūdų uždavinį, naudojantį AIMA architektūrą.
+
+---
+
+## Uždavinys
+
+Fermeris turi pervežti per upę: **lapę**, **vištą** ir **grūdus**. Valtyje telpa tik fermeris + vienas daiktas.
+
+**Apribojimai**:
+- Lapė + višta be fermerio → lapė suės vištą ❌
+- Višta + grūdai be fermerio → višta suės grūdus ❌
+
+---
+
+## Kodo paaiškinimas
+
+### Klasė [FarmerProblem(Problem)](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/WaterJugProblem.py#13-124)
+
+| Elementas | Reikšmė |
+|---|---|
+| `initial = ('L','L','L','L')` | Visi kairėje: (fermeris, lapė, višta, grūdai) |
+| `goal = ('R','R','R','R')` | Visi dešinėje |
+
+### [actions(state)](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/search.py#34-40) – galimi veiksmai
+
+| Veiksmas | Ką daro |
+|---|---|
+| `PLAUKTI_VIENAM` | Fermeris plaukia vienas |
+| `VEZTI_LAPE` | Fermeris veža lapę |
+| `VEZTI_VISTA` | Fermeris veža vištą |
+| `VEZTI_GRUDUS` | Fermeris veža grūdus |
+
+Kiekvienas veiksmas filtruojamas per [ar_saugu()](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/WaterJugProblem.py#99-114) – praleidžiami tik saugūs.
+
+### [result(state, action)](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/search.py#482-501) – nauja būsena
+
+Fermeris persikelia į priešingą krantą. Jei veža ką nors – tas objektas irgi persikelia.
+
+### [ar_saugu(state)](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/WaterJugProblem.py#99-114) – saugumo tikrinimas
+
+```python
+if lape == vista and fermeris != lape:    # Lapė suės vištą!
+    return False
+if vista == grudai and fermeris != vista:  # Višta suės grūdus!
+    return False
+return True
+```
+
+### [h(node)](file:///c:/Users/jarek/Desktop/dirbt%20intelekt%202/Artificial-Intelligence-Course-main/search.py#508-513) – euristika
+
+```python
+return sum(1 for x in node.state if x == 'L')  # Kiek dar kairėje
+```
+
+---
+
+## Programos rezultatai
+
+```
+--- BFS (7 zingsniai) ---
+Zingsnis  Fermeris   Lape     Vista    Grudai   Veiksmas
+0         KAIRE      KAIRE    KAIRE    KAIRE    VEZTI_VISTA
+1         DESINE     KAIRE    DESINE   KAIRE    PLAUKTI_VIENAM
+2         KAIRE      KAIRE    DESINE   KAIRE    VEZTI_LAPE
+3         DESINE     DESINE   DESINE   KAIRE    VEZTI_VISTA
+4         KAIRE      DESINE   KAIRE    KAIRE    VEZTI_GRUDUS
+5         DESINE     DESINE   KAIRE    DESINE   PLAUKTI_VIENAM
+6         KAIRE      DESINE   KAIRE    DESINE   VEZTI_VISTA
+7         DESINE     DESINE   DESINE   DESINE   TIKSLAS! ✅
+```
+
+---
+
+## Kaip paleisti
+
+```bash
+cd "c:\Users\jarek\Desktop\dirbt intelekt 2\Artificial-Intelligence-Course-main"
+python WaterJugProblem.py
+```
